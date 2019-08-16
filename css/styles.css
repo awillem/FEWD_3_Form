@@ -17,16 +17,17 @@ header {
   margin: 0;
 }
 
-header .wrapper {
+header div {
   margin: 0;
-
+  padding: 10px;
 }
 
 header h1 {
   text-align: center;
   color: white;
   text-transform: uppercase;
-  font-size: 1.4rem;
+  font-size: 1.25rem;
+  letter-spacing: .02em;
 }
 
 main h1,
@@ -40,7 +41,8 @@ main p {
 }
 
 .intro h1 {
-  font-size: 1.25rem;
+  font-size: 1.3rem;
+  letter-spacing: .02em;
   color: black;
 }
 
@@ -94,7 +96,7 @@ fieldset {
 form select,
 form textarea {
   width: 100%;
-  border-radius: 5px;
+  border-radius: 3px;
   border: none;
   background: #f8f8f8;
   flex: 1 100%;
@@ -108,7 +110,7 @@ textarea {
 }
 
 .contact_inputs input:last-child {
-  width: 50%;
+  width: 150px;
 }
 
 /* form fieldset:nth-child(2) {
@@ -143,11 +145,11 @@ textarea {
 
 
 button {
-  padding: 20px;
+  padding: 15px;
   background: lightseagreen;
   color: white;
   width: 100%;
-  border-radius: 5px;
+  border-radius: 3px;
   border: none;
   font-size: 1.25rem;
   font-weight: 600;
@@ -171,7 +173,48 @@ footer {
  Media Queries
 **************/
 
+@media (min-width: 768px) {
+  .wrapper {
+    width: 65%;
+    max-width: 650px;
+    margin: 0 auto;
+  }
 
+.contact_inputs {
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: baseline;
+  /* align-content: space-around; */
+  justify-content: flex-start;
+}  
+
+.contact_inputs input[type=text],
+.contact_inputs input[type=email],
+.contact_inputs input[type=tel],
+form select {
+  flex: 3 75%;
+  margin: 8px 0 ;
+}
+
+.contact_inputs label {
+  flex: 1 25%;
+}
+
+
+ .contact_inputs label:last-of-type {
+   max-width: 25%;
+   flex: 1 25%;
+}
+
+.contact_inputs input:last-of-type {
+  max-width: 25%;
+  flex: 1 25% ;
+} 
+
+
+
+  
+}
 
 
 
