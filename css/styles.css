@@ -3,7 +3,7 @@
 }
 
 body {
-  color: gray;
+  color: #4a4a4a;
   margin: 0;
   font-family: 'Alegreya', serif;
 }
@@ -12,8 +12,16 @@ body {
   padding: 15px;
 }
 
+main {
+  background: url( ../vertical-waves/vertical-waves.png), rgba(238,238,238, .3);
+}
+
+main div:first-of-type {
+  background: #eed9e9;
+}
+
 header {
-  background: dimgray;
+  background: #4a4a4a;
   margin: 0;
 }
 
@@ -64,6 +72,25 @@ form legend {
   padding: 20px 0;
 }
 
+input,
+select,
+textarea {
+  background: #f8f8f8;
+  
+  border-radius: 3px;
+  border: none;
+  transition: background 1s ease-out;
+}
+
+
+
+input:focus,
+select:focus {
+  outline: none;
+  border: #a21880 1px solid;
+    background: rgba(231,21,117, .2);
+}
+
 
 .contact_inputs,
 form,
@@ -82,7 +109,7 @@ fieldset {
 
 .contact_inputs input::placeholder {
   text-align: end;
-  color: #ccc;
+  color: #999;
   text-transform: capitalize;
   font-style: italic;
   font-size: .8rem;
@@ -96,9 +123,7 @@ fieldset {
 form select,
 form textarea {
   width: 100%;
-  border-radius: 3px;
-  border: none;
-  background: #f8f8f8;
+  /* background: #f8f8f8; */
   flex: 1 100%;
   /* height: 50px; */
   margin: 15px 0;
@@ -144,9 +169,10 @@ textarea {
 }
 
 
+
 button {
   padding: 15px;
-  background: lightseagreen;
+  background: #a21880;
   color: white;
   width: 100%;
   border-radius: 3px;
@@ -154,14 +180,21 @@ button {
   font-size: 1.25rem;
   font-weight: 600;
   margin-top: 15px;
+  transition: background .25s ease-in;
+}
+
+button:hover {
+  background: rgba(162,24,128, .7);
 }
 
 footer {
-  margin-top: 15px;
-  margin-bottom: 40px;
+  padding-top: 15px;
+  padding-bottom: 40px;
   text-align: center;
   font-size: .9rem;
   font-style: italic;
+  background: #bfbfbe;
+  
 }
 
 
